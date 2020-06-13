@@ -17,49 +17,18 @@ public class hello {
             }
 
         }
-//     HI
-        for (int i = 3; i < arr.length - 3; i++) {
-            for (int f = 3; f < 6; f++) {
-                Array.setChar(arr[i], f, ' ');
-            }
-        }
-        for (int i = 3; i < arr.length - 3; i++) {
-            for (int f = 11; f < 14; f++) {
-                Array.setChar(arr[i], f, ' ');
-            }
-        }
-        for (int i = 8; i < 10; i++) {
-            for (int f = 6; f < 11; f++) {
-                Array.setChar(arr[i], f, ' ');
-            }
-        }
-
+//     H
+        drow_straight(arr, 3,3,3,6);
+        drow_straight(arr,3,3,11,14);
+        drow_straight(arr, 8,7,6,11);
+        // i
+        drow_straight(arr, 6,3,18,21);
 
         // I
-        for (int i = 6; i < arr.length - 3; i++) {
-            for (int f = 18; f < 21; f++) {
-                Array.setChar(arr[i], f, ' ');
-            }
-        }
-
-
-        // i
-        for (int i = 3; i < arr.length - 3; i++) {
-            for (int f = 27; f < 30; f++) {
-                Array.setChar(arr[i], f, ' ');
-            }
-        }
-
+        drow_straight(arr, 3, 3, 27, 30);
         // l
-
-        for (int i = 3; i < arr.length - 3; i++) {
-            for (int f = 34; f < 37; f++) {
-                Array.setChar(arr[i], f, ' ');
-            }
-        }
-
+        drow_straight(arr, 3,3, 34, 37);
         // y
-
           int t = 40;
         for(int i = 6; i < 10; i++){
             for(int z = t; z < t+3; z++){
@@ -67,7 +36,6 @@ public class hello {
                     }
                  t++;
                 }
-
         int s = 48;
         for(int i = 6; i < 9; i++){
             for(int z = s; z > s-3; z--){
@@ -75,12 +43,7 @@ public class hello {
             }
             s--;
         }
-
-        for (int i = 10; i < arr.length - 3; i++) {
-            for (int f = 43; f < 46; f++) {
-                Array.setChar(arr[i], f, ' ');
-            }
-        }
+        drow_straight(arr,10,3,43,46);
 
         // A
 
@@ -99,16 +62,12 @@ public class hello {
             }
             w++;
         }
-        for (int i = 11; i < 12; i++) {
-            for (int f = 54; f < 61; f++) {
-                Array.setChar(arr[i], f, ' ');
-            }
-        }
+        drow_straight(arr, 11, 5, 54, 61);
 
 
 
 
-
+            // выыод на консоль
 
             for (int i = 0; i < arr.length; i++) {
                 for (int j = 0; j < dlina; j++) {
@@ -117,12 +76,17 @@ public class hello {
                 System.out.println();
             }
 
+        }
 
-            LinkedList<Character> list = new LinkedList<Character>();
-            char c = (char) (random.nextInt(26) + 'a');
-            list.add(0, c);
-            System.out.println(list.get(0));
 
+        // Фунция прямой линии
+        public static void drow_straight (char a[][], int i, int leg, int f, int fe){
+         int l = leg;
+        for (int iv = i; iv < a.length - l; iv++) {
+                for (int fu = f; fu < fe; fu++) {
+                    Array.setChar(a[iv], fu, ' ');
+                }
+            }
 
         }
 
